@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Microsoft.AspNetCore.Identity.IdentityRole>
+
+@{
+    ViewBag.Title = "delete Role";
+}
+
+<h1>Edit Role</h1>
+
+@foreach (var role in Model)
+{
+    <form method="post" asp-action="DeleteRole">
+        <span id="confirmDeleteSpan_@role.Id">
+            <span>Are You sure want to delet this role ?</span>
+            <button type="submit" class="btn btn-danger">Yes</button>
+            <a href="#" class="btn btn-primary" onclick="ConfirmDelete('@role.Id', false)">No</a>
+        </span>
+        <span id="deleteSpan_@role.Id">
+            <a href="#" class="btn btn-danger" onclick="ConfirmDelete('@role.Id', true)">Delete</a>
+        </span>
+    </form>
+}
+
+@section Scripts{
+    <script src="~/js/script.js"></script>
+}

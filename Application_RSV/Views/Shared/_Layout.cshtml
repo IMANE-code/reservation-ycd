@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Application_RSV</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+    <link href="~/Template/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Template/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="~/Template/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="~/Template/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/Template/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="~/Template/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="~/Template/vendor/aos/aos.css" rel="stylesheet">
+    <link href="~/Template/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <header id="header" class="fixed-top ">
+        <div class="container">
+
+            <div class="logo float-left">
+                <h1 class="text-light"><a href="index.html"><span>Moderna</span></a></h1>
+            </div>
+
+            <nav style="width:50%"  class="nav-menu float-right d-none d-lg-block">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a asp-action="Index" asp-controller="Reservations">Reservation</a></li>
+                    <li><a asp-action="Index" asp-controller="typeRs">Type</a></li>
+                    <li class="drop-down">
+                        <a href="">Role</a>
+                        <ul>
+                            <li><a asp-action="AfficheUser" asp-controller="Role">Users</a></li>
+                            <li><a asp-action="Index" asp-controller="Role">Roles</a>
+                        </ul>
+                    </li>
+                    <li class="active"><a href="contact.html">History</a></li>
+                </ul>
+                <partial name="_LoginPartial" />
+            </nav><!-- .nav-menu -->
+
+        </div>
+    </header>
+    <div class="Section_Body" style=" position: relative; top: 100px;">
+        @RenderBody()
+    </div>
+
+    @RenderSection("Scripts", required: false)
+    <script src="~/Template/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Template/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Template/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="~/Template/vendor/php-email-form/validate.js"></script>
+    <script src="~/Template/vendor/venobox/venobox.min.js"></script>
+    <script src="~/Template/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="~/Template/vendor/counterup/counterup.min.js"></script>
+    <script src="~/Template/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="~/Template/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/Template/vendor/aos/aos.js"></script>
+    <script src="~/Template/js/main.js"></script>
+</body>
+</html>
